@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+    <EditText
+        android:id="@+id/number1"
+        android:background="@android:color/white"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="80dp"
+        android:backgroundTint="#72CFCFCF"
+        />
+
+    <EditText
+        android:id="@+id/number2"
+        android:background="@android:color/white"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/number1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#72CFCFCF"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sum"
+        android:textSize="30sp"
+        android:text="+"
+        android:onClick="doSum"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number1"
+        android:layout_marginStart="120dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/purple_200" 
+        />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/multiply"
+            android:textSize="30sp"
+            android:text="*"
+            android:onClick="doMultiply"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/number1"
+            android:layout_toRightOf="@+id/sum"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/purple_200"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus"
+            android:textSize="30sp"
+            android:text="-"
+            android:onClick="doMinus"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sum"
+            android:layout_marginStart="120dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/purple_200"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/divide"
+            android:textSize="30sp"
+            android:text=":"
+            android:onClick="doDivide"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/multiply"
+            android:layout_toRightOf="@+id/minus"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:padding="15dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/purple_200"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/equal"
+            android:textSize="30sp"
+            android:text="="
+            android:onClick="doEqual"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minus"
+            android:layout_marginStart="140dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:padding="14dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/purple_200"
+
+            />
+
+        <TextView
+            android:id="@+id/result"
+            android:textSize="30sp"
+            android:hint="Result"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@+id/equal"
+            android:layout_marginTop="20dp"
+            android:background="#DCC4F4"
+            android:layout_marginStart="135dp"
+            android:padding="15dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
